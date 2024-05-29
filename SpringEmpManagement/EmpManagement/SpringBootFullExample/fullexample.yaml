@@ -1,0 +1,14 @@
+version: "2"
+services:
+  fullexample:
+    image: fullexample
+    ports:
+      - 8080:8080
+  mysqlserver:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: "1q2w3e"
+      MYSQL_DATABASE: "it526"
+      MYSQL_ROOT_HOST: "%"
+      ports:
+        -3306:3306
